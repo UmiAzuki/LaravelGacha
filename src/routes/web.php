@@ -22,4 +22,8 @@ Route::get('/hello', function () {
     return view('hello');
 });
 
+Route::get('/top', function () {
+    return view('top');
+});
+
 Route::get('/test', [TestController::class, 'index']);
