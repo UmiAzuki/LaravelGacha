@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>My First Page</title>
-</head>
+<?php include __DIR__ . '/head.phtml' ?>
+
 <body class="w-100 h-100 text-white bg-dark container">
     <div class="cover-container">
         <?php include __DIR__ . '/layouts/header.phtml' ?>

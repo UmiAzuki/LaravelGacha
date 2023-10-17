@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
+<?php
+include __DIR__ . '/head.phtml';
+const RARITYFORIMAGE = ['', 'normal', 'normalplus', 'rare', 'rareplus', 'srare'];
+?>
 <head>
   <meta charset="UTF-8">
   <title>My First Page</title>
