@@ -26,4 +26,6 @@ Route::get('/top', function () {
     return view('top');
 });
 
-Route::get('/test', [TestController::class, 'index']);
+Route::post('/gacha/execute', function () {
+    return view('gacha-result', GachaExecuteAction::class);
+});

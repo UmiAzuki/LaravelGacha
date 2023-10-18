@@ -9,7 +9,7 @@ use App\Services\Gacha\IGachaQuery;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 use App\Services\Gacha\IGachaService;
-use Slim\Views\PhpRenderer;
+use resources\views\gacha-result;
 
 final class GachaExecuteAction extends Action
 {

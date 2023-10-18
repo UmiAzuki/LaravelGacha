@@ -13,7 +13,6 @@
                     if ($_POST["gacha_type"] === "1") {
                     ?>
                         <div class="mx-3">
-                            <img class="rounded img-thumbnail" src="<?= $urlForIndex ?>/assets/img/card/<?= $response['gachaResult']->fileName ?>" width="270px" height="360px">
                             <?php if ($response['gachaResult']->isNew) { ?>
                                 <p class="text-warning text-center">New!</p>
                             <?php } else { ?>
@@ -25,7 +24,6 @@
                         foreach ($response['gachaResult'] as $i => $card) {
                     ?>
                             <div class="mx-3">
-                                <img class="rounded img-thumbnail" src="<?= $urlForIndex ?>/assets/img/card/<?= $card->fileName ?>" width="180px" height="240px">
                                 <?php if ($card->isNew) { ?>
                                     <p class="text-warning text-center">New!</p>
                                 <?php } else { ?>
@@ -40,7 +38,7 @@
                 <div class="row">
                     <div class="d-flex justify-content-center flex-wrap">
                         <form class="form-inline px-5" method="post" action="<?= $urlForIndex ?>/gacha/execute">
-                            <button class="btn" type="submit" name="gacha_type" value=<?= $_POST["gacha_type"] ?>><img src="<?= $urlForIndex ?>/assets/img/ui/retry.png" alt="もう一度ガチャを回す" /></button>
+                            <button class="btn" type="submit" name="gacha_type" value=<?= $_POST["gacha_type"] ?>>
                         </form>
                         <div class="form-inline px-5">
                             <button class="btn"><a href="/index"><img src="<?= $urlForIndex ?>/assets/img/ui/gotop.png" alt="トップに戻る" /></a></button>

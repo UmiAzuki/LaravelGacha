@@ -16,6 +16,6 @@ final class GachaResultsAction extends Action
     protected function action(Request $request, Response $response): Response
     {
         $args['response']['gachaResult'] = $_SESSION['gacha_result'];
-        return $this->view->render($response, 'gacha-results.phtml', $args);
+        return $this->view->render($response, 'gacha-result.blade.php', $args);
     }
 }
