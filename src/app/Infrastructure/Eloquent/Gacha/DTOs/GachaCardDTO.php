@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Services\Gacha\DTOs;
+namespace App\Infrastructure\Eloquent\Gacha\DTOs;
 
 class GachaCardDTO
 {

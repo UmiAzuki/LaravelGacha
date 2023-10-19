@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Gacha;
+namespace App\Domain;
 
-use App\Services\Gacha\DTOs\GachaCardDTO;
-use App\Services\Gacha\DTOs\GachaWeightDTO;
+use App\Infrastructure\Eloquent\Gacha\DTOs\GachaCardDTO;
+use App\Infrastructure\Eloquent\Gacha\DTOs\GachaWeightDTO;
 
 interface IGachaService
 {

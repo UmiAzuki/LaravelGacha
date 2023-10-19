@@ -9,7 +9,6 @@ use App\Services\Gacha\IGachaQuery;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 use App\Services\Gacha\IGachaService;
-use resources\views\gacha-result;
 
 final class GachaExecuteAction extends Action
 {
@@ -17,13 +16,11 @@ final class GachaExecuteAction extends Action
     private IGachaService $gachaService;
 
     /**
-     * @param PhpRenderer $view
      * @param IGachaQuery $gachaQuery
      * @param IGachaService $gachaService
      */
-    public function __construct(PhpRenderer $view, IGachaQuery $gachaQuery, IGachaService $gachaService)
+    public function __construct(IGachaQuery $gachaQuery, IGachaService $gachaService)
     {
-        parent::__construct($view);
         $this->gachaQuery = $gachaQuery;
         $this->gachaService = $gachaService;
     }

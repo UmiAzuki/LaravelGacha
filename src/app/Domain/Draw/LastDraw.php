@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Services\Gacha\Draw;
+namespace App\Domain\Draw;
 
 use App\Domain\Card\Card;
 use App\Domain\Card\CardDomainService;

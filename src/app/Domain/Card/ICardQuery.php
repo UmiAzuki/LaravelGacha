@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Services\Card\Query;
+namespace App\Domain\Card;
 
-use App\Services\Card\Query\DTOs\CardListQueryDTO;
-use App\Services\Card\Query\DTOs\GachaHistoryQueryDTO;
+use App\Infrastructure\Eloquent\Card\DTOs\CardListQueryDTO;
+use App\Infrastructure\Eloquent\Card\DTOs\GachaHistoryQueryDTO;
 
 interface ICardQuery
 {

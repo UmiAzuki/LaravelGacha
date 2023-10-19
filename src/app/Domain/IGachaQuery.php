@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-namespace App\Services\Gacha;
-use App\Services\Gacha\DTOs\GachaWeightDTO;
+namespace App\Domain;
+use App\Infrastructure\Eloquent\Gacha\DTOs\GachaWeightDTO;
 
 
 interface IGachaQuery

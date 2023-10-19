@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Services\Card\Query\DTOs;
+namespace App\Infrastructure\Eloquent\Card\DTOs;
 
 class GachaHistoryQueryDTO
 {

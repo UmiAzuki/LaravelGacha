@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Services\Gacha\Draw;
+namespace App\Domain\Draw;
 
 use App\Domain\Card\Card;
-use App\Services\Gacha\DTOs\GachaWeightDTO;
+use App\Infrastructure\Eloquent\Gacha\DTOs\GachaWeightDTO;
 
 interface IDraw
 {

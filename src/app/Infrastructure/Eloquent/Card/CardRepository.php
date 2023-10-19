@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Eloquent\Card;
 
-use App\Domain\Card\Ability\CardAbility;
-use App\Domain\Card\Ability\CardAbilityFactory;
+use App\Domain\Card\CardAbility;
+use App\Domain\Card\CardAbilityFactory;
 use App\Domain\Card\Card;
 use App\Domain\Card\CardFactory;
 use App\Domain\Card\ICardRepository;

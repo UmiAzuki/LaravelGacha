@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Domain\Card;
 
-use App\Domain\Card\Ability\CardAbility;
+use App\Domain\Card\CardAbility;
 use Exception;
 
 interface ICardRepository

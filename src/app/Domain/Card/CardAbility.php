@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Card\Ability;
+namespace App\Domain\Card;
 
 use App\Domain\Card\Card;
 use App\Domain\Card\Rarity;

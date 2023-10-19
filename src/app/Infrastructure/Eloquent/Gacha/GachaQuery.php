@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Infrastructure\Eloquent\Gacha;
 
 use App\Infrastructure\Eloquent\Models\MasterGachaWeightModel;
-use App\Services\Gacha\DTOs\GachaWeightDTO;
-use App\Services\Gacha\IGachaQuery;
+use App\Infrastructure\Eloquent\Gacha\DTOs\GachaWeightDTO;
+use App\Domain\IGachaQuery;
 
 final class GachaQuery implements IGachaQuery
 {
