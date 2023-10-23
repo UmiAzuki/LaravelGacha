@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Actions\Card;
 
 use App\Actions\Action;
-use App\Services\Card\Query\ICardQuery;
+use App\Domain\Card\ICardQuery;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 use Slim\Views\PhpRenderer;

@@ -6,6 +6,7 @@
 </head>
 <body>
     <form class="form-inline" method="post" action="gacha/execute">
+    @csrf
             <div class="row">
                 <div class="col-md-2 form-inline"></div>
                 <div class="col-md-4 text-center">

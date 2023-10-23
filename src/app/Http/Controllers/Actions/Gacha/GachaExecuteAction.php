@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace App\Actions\Gacha;
 
 use App\Actions\Action;
-use App\Services\Gacha\IGachaQuery;
+use App\Domain\IGachaQuery;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use App\Services\Gacha\IGachaService;
+use App\Domain\IGachaService;
 
 final class GachaExecuteAction extends Action
 {
@@ -32,6 +32,7 @@ final class GachaExecuteAction extends Action
     {
         $userId = $request->getAttribute('session')['userId'];
         $gachaID = 1;
+        dd('test');
 
         $gachaWeightTable = $this->gachaQuery->gachaWeightQuery($gachaID);
 

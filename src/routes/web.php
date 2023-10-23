@@ -27,5 +27,5 @@ Route::get('/top', function () {
 });
 
 Route::post('/gacha/execute', function () {
-    return view('gacha-result', GachaExecuteAction::class);
+    return view('gacha-result');
 });

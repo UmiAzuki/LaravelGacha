@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace App\Infrastructure\Eloquent\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use app\Domain\IGachaQuery;
