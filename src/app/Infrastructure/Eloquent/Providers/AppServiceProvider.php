@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         $this->app->bind(IGachaService::class, function($app) {
-            return $app->make(GachaService::class);
+            return new \App\InfraStructure\Eloquent\Gacha\GachaService();
         });
 
         $this->app->bind(ICardQuery::class, function($app) {
@@ -36,7 +36,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         $this->app->bind(TransactionInterface::class, function($app) {
-            return $app->make(Transaction::class);
+            return new \App\InfraStructure\Eloquent\Transaction();
         });
 
     }
