@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Actions\Gacha;
+namespace resources\views\Actions\Gacha;
 
-use App\Actions\Action;
+use resources\views\Actions\Action;
 use App\Domain\IGachaQuery;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -38,12 +38,12 @@ final class GachaExecuteAction extends Action
 
         if ($_POST["gacha_type"] === "1") {
             $args['response']['gachaResult'] = $this->gachaService->singleGacha($userId, $gachaWeightTable);
-            return $this->view->render($response, 'gacha-single.phtml', $args);
+            return $this->view->render($response, 'gacha-single.blade.php', $args);
         }
         if ($_POST["gacha_type"] === "10") {
             $args['response']['gachaResult'] = $this->gachaService->multiGacha($userId, $gachaWeightTable, 10);
-            return $this->view->render($response, 'gacha-10shot.phtml', $args);
+            return $this->view->render($response, 'gacha-10shot.blade.php', $args);
         }
-        return $this->view->render($response, 'gacha-top.phtml');
+        return $this->view->render($response, 'top.blade.php');
     }
 }

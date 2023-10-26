@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Actions\Gacha;
+namespace resources\views\Actions\Gacha;
 
 use App\Actions\Action;
 use Psr\Http\Message\ServerRequestInterface as Request;

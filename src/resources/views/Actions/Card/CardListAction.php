@@ -2,23 +2,22 @@
 
 declare(strict_types=1);
 
-namespace App\Actions\Card;
+namespace resources\views\Actions\Card;
 
-use App\Actions\Action;
+use resources\views\Actions\Action;
 use App\Domain\Card\ICardQuery;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use Slim\Views\PhpRenderer;
 
 final class CardListAction extends Action
 {
     private ICardQuery $cardQuery;
 
     /**
-     * @param PhpRenderer $view
+     * @param Action $view
      * @param ICardQuery $cardQuery
      */
-    public function __construct(PhpRenderer $view, ICardQuery $cardQuery)
+    public function __construct(Action $view, ICardQuery $cardQuery)
     {
         parent::__construct($view);
         $this->cardQuery = $cardQuery;

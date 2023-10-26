@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Actions\Gacha\GachaExecuteAction;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +26,4 @@ Route::get('/top', function () {
     return view('top');
 });
 
-Route::post('/gacha/execute', function () {
-    return view('gacha-result');
-});
+Route::post('/gacha/execute', [resources\views\Actions\Gacha\GachaExecuteAction::class, 'GachaExecuteAction']) ->name('gea');
