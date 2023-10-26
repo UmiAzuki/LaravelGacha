@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Card;
+namespace App\Contracts;
 
 use App\Domain\Card\CardAbility;
+use App\Domain\Card\Card;
 use Exception;
 
 interface ICardRepository

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Card;
+namespace App\Contracts;
 
 use App\Infrastructure\Eloquent\Card\DTOs\CardListQueryDTO;
 use App\Infrastructure\Eloquent\Card\DTOs\GachaHistoryQueryDTO;

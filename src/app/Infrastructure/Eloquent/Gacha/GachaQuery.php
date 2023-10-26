@@ -6,7 +6,7 @@ namespace App\Infrastructure\Eloquent\Gacha;
 
 use App\Infrastructure\Eloquent\Models\MasterGachaWeightModel;
 use App\Infrastructure\Eloquent\Gacha\DTOs\GachaWeightDTO;
-use App\Domain\IGachaQuery;
+use App\Contracts\IGachaQuery;
 
 final class GachaQuery implements IGachaQuery
 {

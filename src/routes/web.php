@@ -2,6 +2,13 @@
 
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+
+Route::get('/random', function () {
+    $randomItem = DB::table('mst_card')->inRandomOrder()->first();
+
+    return view('random', ['item' => $randomItem]);
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +33,4 @@ Route::get('/top', function () {
     return view('top');
 });
 
-Route::post('/gacha/execute', [resources\views\Actions\Gacha\GachaExecuteAction::class, 'GachaExecuteAction']) ->name('gea');
+Route::post('/gacha/execute', [App\Http\Controllers\TestController::class, 'GachaExecuteAction']) ->name('gea');
