@@ -1,14 +1,13 @@
 <?php
 
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\GachaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use resources\views\Actions\Gacha\GachaExecuteAction;
 
-Route::get('/random', function () {
-    $randomItem = DB::table('mst_card')->inRandomOrder()->first();
-
-    return view('random', ['item' => $randomItem]);
-});
+use App\Contracts\IGachaQuery;
+use App\Contracts\IGachaService;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,16 +20,18 @@ Route::get('/random', function () {
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/hello', function () {
-    return view('hello');
-});
 
 Route::get('/top', function () {
     return view('top');
 });
 
-Route::post('/gacha/execute', [App\Http\Controllers\TestController::class, 'GachaExecuteAction']) ->name('gea');
+
+Route::post('/random', function () {
+    GachaExecuteAction::class;
+
+    $randomItem = DB::table('mst_card')->inRandomOrder()->first();
+
+    return view('random', ['item' => $randomItem]);
+});
+
+Route::post('/gacha-result', 'App\Http\Controllers\GachaController@execute');

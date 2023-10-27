@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use app\Http\Controllers\Controller;
 use resources\views\Actions\Gacha\GachaExecuteAction;
-use App\Domain\IGachaService;
-use App\Domain\IGachaQuery;
+use App\Contracts\IGachaService;
+use App\Contracts\IGachaQuery;
 use resources\views\Actions\Action;
 use App\Infrastructure\Eloquent\Gacha\GachaQuery;
 use App\Infrastructure\Eloquent\Gacha\GachaService;

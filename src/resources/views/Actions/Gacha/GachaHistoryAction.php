@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace resources\views\Actions\Gacha;
 
 use resources\views\Actions\Action;
-use App\Domain\Card\ICardQuery;
+use App\Contracts\ICardQuery;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 

@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace resources\views\Actions\Gacha;
 
 use resources\views\Actions\Action;
-use App\Domain\IGachaQuery;
+use App\Contracts\IGachaQuery;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use App\Domain\IGachaService;
+use App\Contracts\IGachaService;
 
 final class GachaExecuteAction extends Action
 {

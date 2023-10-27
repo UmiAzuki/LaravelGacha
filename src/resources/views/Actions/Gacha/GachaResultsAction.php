@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace resources\views\Actions\Gacha;
 
-use App\Actions\Action;
+use resources\views\Actions\Action;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 

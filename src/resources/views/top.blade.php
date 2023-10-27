@@ -5,7 +5,7 @@
   <title>My First Page</title>
 </head>
 <body>
-    <form class="form-inline" method="post" action="gacha/execute">
+    <form class="form-inline" method="post" action="/gacha-result">
     @csrf
             <div class="row">
                 <div class="col-md-2 form-inline"></div>

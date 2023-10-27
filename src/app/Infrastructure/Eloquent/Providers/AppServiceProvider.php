@@ -3,11 +3,12 @@
 namespace App\Infrastructure\Eloquent\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use app\Domain\IGachaQuery;
-use app\Domain\IGachaService;
-use app\Domain\Card\ICardQuery;
-use app\Domain\Card\ICardRepository;
+use App\Contracts\IGachaQuery;
+use App\Contracts\IGachaService;
+use App\Contracts\ICardQuery;
+use App\Contracts\ICardRepository;
 use App\Infrastructure\Eloquent\TransactionInterface;
+use Illuminate\Database\DatabaseManager;
 
 
 class AppServiceProvider extends ServiceProvider

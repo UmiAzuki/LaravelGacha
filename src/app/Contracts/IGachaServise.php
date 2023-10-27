@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Domain;
+namespace App\Contracts;
 
 use App\Infrastructure\Eloquent\Gacha\DTOs\GachaCardDTO;
 use App\Infrastructure\Eloquent\Gacha\DTOs\GachaWeightDTO;

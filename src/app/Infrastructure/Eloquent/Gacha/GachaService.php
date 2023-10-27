@@ -20,7 +20,7 @@ final class GachaService implements IGachaService
      * @param TransactionInterface $transaction
      */
     public function __construct(
-        ICardRepository $cardRepository,
+        ICardRepository $cardRepository
     ) {
         $this->cardRepository = $cardRepository;
         $this->drawFactory = new DrawFactory($this->cardRepository);
