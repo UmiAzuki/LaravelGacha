@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Card;
 
+use App\Contracts\ICardRepository;
 use App\Domain\Card\Card;
-use App\Domain\Card\ICardRepository;
 
 final class CardDomainService
 {

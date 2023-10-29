@@ -10,43 +10,23 @@ use App\Contracts\ICardRepository;
 use App\Infrastructure\Eloquent\TransactionInterface;
 use Illuminate\Database\DatabaseManager;
 
+use App\Infrastructure\Eloquent\Gacha\GachaQuery;
+use App\Infrastructure\Eloquent\Gacha\GachaService;
+use App\Infrastructure\Eloquent\Card\CardQuery;
+use App\Infrastructure\Eloquent\Card\CardRepository;
+use App\Infrastructure\Eloquent\Transaction;
+
 
 class AppServiceProvider extends ServiceProvider
 {
-        /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        $this->app->bind(IGachaQuery::class, function($app) {
-            return new \App\InfraStructure\Eloquent\Gacha\GachaQuery();
-        });
-
-        $this->app->bind(IGachaService::class, function($app) {
-            return new \App\InfraStructure\Eloquent\Gacha\GachaService();
-        });
-
-        $this->app->bind(ICardQuery::class, function($app) {
-            return new \App\InfraStructure\Eloquent\Card\CardQuery();
-        });
-
-        $this->app->bind(ICardRepository::class, function($app) {
-            return new \App\InfraStructure\Eloquent\Card\CardRepository();
-        });
-
-        $this->app->bind(TransactionInterface::class, function($app) {
-            return new \App\InfraStructure\Eloquent\Transaction();
-        });
-
-    }
-
     /**
-     * Bootstrap any application services.
+     * @var array
      */
-    public function boot(): void
-    {
-        //
-    }
+    public array $bindings = [
+        ICardQuery::class => CardQuery::class,
+        ICardRepository::class => CardRepository::class,
+        IGachaQuery::class => GachaQuery::class,
+        IGachaService::class => GachaService::class,
+        TransactionInterface::class => Transaction::class
+    ];
 }
