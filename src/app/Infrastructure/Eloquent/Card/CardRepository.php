@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Eloquent\Card;
 
+use App\Contracts\ICardRepository;
 use App\Domain\Card\CardAbility;
 use App\Domain\Card\CardAbilityFactory;
 use App\Domain\Card\Card;
 use App\Domain\Card\CardFactory;
-use App\Domain\Card\ICardRepository;
 use App\Infrastructure\Eloquent\Models\MasterCardAbilityModel;
 use App\Infrastructure\Eloquent\Models\MasterCardModel;
 use App\Infrastructure\Eloquent\Models\UserCardInventoryModel;

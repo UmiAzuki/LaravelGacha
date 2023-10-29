@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Eloquent\Gacha;
 
-use App\Domain\IGachaService;
-use App\Domain\Card\ICardRepository;
+use App\Contracts\IGachaService;
+use App\Contracts\ICardRepository;
 use App\Domain\Draw\DrawFactory;
 use App\Domain\Draw\DrawType;
 use App\Infrastructure\Eloquent\Gacha\DTOs\GachaCardDTO;
