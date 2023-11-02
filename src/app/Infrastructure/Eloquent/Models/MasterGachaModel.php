@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 final class MasterGachaModel extends Model
 {
-    protected $connection = 'readonly';
+    protected $connection = 'mysql';
     protected $table = 'mst_gacha';
 
     public function gachaWeight()

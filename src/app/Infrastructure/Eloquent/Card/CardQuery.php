@@ -7,7 +7,7 @@ namespace App\Infrastructure\Eloquent\Card;
 use App\Infrastructure\Eloquent\Models\UserCardInventoryModel;
 use App\Infrastructure\Eloquent\Card\DTOs\CardListQueryDTO;
 use App\Infrastructure\Eloquent\Card\DTOs\GachaHistoryQueryDTO;
-use App\Domain\Card\ICardQuery;
+use App\Contracts\ICardQuery;
 
 final class CardQuery implements ICardQuery
 {

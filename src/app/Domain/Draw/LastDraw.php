@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace App\Domain\Draw;
 
-use App\Contracts\ICardRepository;
 use App\Domain\Card\Card;
 use App\Domain\Card\CardDomainService;
+use App\Contracts\ICardRepository;
+use App\Contracts\IDraw;
 
 /**
  * Normalカードは出ない仕様

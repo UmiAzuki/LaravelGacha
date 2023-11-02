@@ -32,7 +32,6 @@ final class GachaExecuteAction extends Action
     {
         $userId = $request->getAttribute('session')['userId'];
         $gachaID = 1;
-        dd('test');
 
         $gachaWeightTable = $this->gachaQuery->gachaWeightQuery($gachaID);
 

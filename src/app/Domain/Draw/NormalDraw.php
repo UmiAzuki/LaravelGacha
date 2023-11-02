@@ -7,6 +7,7 @@ namespace App\Domain\Draw;
 use App\Contracts\ICardRepository;
 use App\Domain\Card\Card;
 use App\Domain\Card\CardDomainService;
+use App\Contracts\IDraw;
 
 /**
  * 確率テーブルどおりにカードを引く
