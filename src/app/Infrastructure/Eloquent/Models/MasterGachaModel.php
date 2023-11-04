@@ -10,6 +10,7 @@ final class MasterGachaModel extends Model
 {
     protected $connection = 'mysql';
     protected $table = 'mst_gacha';
+    public $timestamps = false;
 
     public function gachaWeight()
     {

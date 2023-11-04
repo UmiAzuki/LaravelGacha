@@ -10,4 +10,5 @@ class UserModel extends Model
 {
     protected $table = 'tbl_users';
     protected $fillable = ['user_code'];
+    public $timestamps = false;
 }

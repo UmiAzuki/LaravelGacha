@@ -10,6 +10,7 @@ final class UserCardInventoryModel extends Model
 {
     protected $table = 'tbl_user_card_inventory';
     protected $fillable = ['user_id', 'card_id', 'num'];
+    public $timestamps = false;
 
     public function card()
     {

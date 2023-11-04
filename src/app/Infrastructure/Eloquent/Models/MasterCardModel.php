@@ -10,6 +10,7 @@ final class MasterCardModel extends Model
 {
     protected $connection = 'mysql';
     protected $table = 'mst_card';
+    public $timestamps = false;
 
     public function ability()
     {
