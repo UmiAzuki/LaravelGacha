@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
           CardSeeder::class,
           GachaSeeder::class,
           GachaWeightSeeder::class,
-          GameflagsSeeder::class,
         ]);
     }
 }

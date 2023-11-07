@@ -8,6 +8,7 @@ const RARITYFORIMAGE = ['', 'normal', 'normalplus', 'rare', 'rareplus', 'srare']
   <title>My First Page</title>
 </head>
 <body class="w-100 h-100 text-white bg-dark container">
+@csrf
     <div class="cover-container">
         <?php
         $maxRarityNum = 1;

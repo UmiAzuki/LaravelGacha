@@ -6,6 +6,7 @@ const RARITYFORIMAGE = ['', 'normal', 'normalplus', 'rare', 'rareplus', 'srare']
 
 
 <body class="w-100 h-100 text-white bg-dark container">
+@csrf
     <div class="cover-container">
         <?php
         $card = $gachaResult;
