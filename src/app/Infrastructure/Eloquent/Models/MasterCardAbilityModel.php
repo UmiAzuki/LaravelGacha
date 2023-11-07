@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 
 final class MasterCardAbilityModel extends Model
 {
-    protected $connection = 'readonly';
+    protected $connection = 'mysql';
     protected $table = 'mst_card_ability';
+    public $timestamps = false;
 
     public function card()
     {

@@ -8,6 +8,7 @@ const RARITYFORIMAGE = ['', 'normal', 'normalplus', 'rare', 'rareplus', 'srare']
   <title>My First Page</title>
 </head>
 <body class="w-100 h-100 text-white bg-dark container">
+@csrf
     <div class="cover-container">
         <?php
         $maxRarityNum = 1;
@@ -17,7 +18,7 @@ const RARITYFORIMAGE = ['', 'normal', 'normalplus', 'rare', 'rareplus', 'srare']
             <script>
                 const cards = [];
                 const rarity = [];
-                <?php foreach ($response['gachaResult'] as $card) { ?>
+                <?php foreach ($gachaResult as $card) { ?>
                     cards.push(<?= json_encode($card) ?>);
                     rarity.push('<?= RARITYFORIMAGE[$card->rarityID]; ?>');
                     <?php if ($maxRarityNum < $card->rarityID) {
@@ -25,7 +26,19 @@ const RARITYFORIMAGE = ['', 'normal', 'normalplus', 'rare', 'rareplus', 'srare']
                     } ?>
                 <?php } ?>
                 const maxRarity = '<?= RARITYFORIMAGE[$maxRarityNum]; ?>';
+                document.write("10連ガチャの抽選結果");
+                document.write('<br>');
+                document.write('<br>');
+                for (i = 0; i < cards.length; i++) {
+                    document.write(((i+1) + "枚目: " + "\n" + "レアリティ: " + rarity[i] + "\n" +  "カードナンバー: " + cards[i].rarityID));
+                    document.write('<img src="http://localhost:8080/img/'+ cards[i].fileName +'" >');
+                    document.write('<br>');
+                }
             </script>
+        <form class="form-inline" method="post" action="/gacha-result">
+        @csrf
+        <button class="btn" type="submit" name="gacha_type" value="10">10連ガチャを回す</button>
+        </form>
         </main>
     </div>
 </body>

@@ -22,7 +22,7 @@ class GachaController extends Controller
 
     public function execute(Request $request)
     {
-        $userId = $request->session()->get('userId');
+        $userId = 1;
         $gachaID = 1;
 
         $gachaWeightTable = $this->gachaQuery->gachaWeightQuery($gachaID);
@@ -32,7 +32,7 @@ class GachaController extends Controller
             return view('gacha-single', ['gachaResult' => $gachaResult]);
         } elseif ($request->input('gacha_type') === "10") {
             $gachaResult = $this->gachaService->multiGacha($userId, $gachaWeightTable, 10);
-            return view('gacha-10shot', ['gachaResult' => $gachaResult]);
+            return view('gacha-10shots', ['gachaResult' => $gachaResult]);
         } else {
             return view('top');
         }

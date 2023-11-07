@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Domain\Draw;
 
 use App\Contracts\ICardRepository;
+use App\Contracts\IDraw;
 
 final class DrawFactory
 {
