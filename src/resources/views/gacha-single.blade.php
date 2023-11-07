@@ -20,6 +20,7 @@ const RARITYFORIMAGE = ['', 'normal', 'normalplus', 'rare', 'rareplus', 'srare']
                 document.write('<br>');
                 document.write('<br>');
                     document.write("レアリティ: " + rarity + "\n" +  "カードナンバー: " + card.rarityID);
+                    document.write('<img src="http://localhost:8080/img/'+ card.fileName +'" >');
                     document.write('<br>');
             </script>
         </main>
