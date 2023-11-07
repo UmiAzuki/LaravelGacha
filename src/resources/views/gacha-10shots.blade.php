@@ -35,6 +35,10 @@ const RARITYFORIMAGE = ['', 'normal', 'normalplus', 'rare', 'rareplus', 'srare']
                     document.write('<br>');
                 }
             </script>
+        <form class="form-inline" method="post" action="/gacha-result">
+        @csrf
+        <button class="btn" type="submit" name="gacha_type" value="10">10連ガチャを回す</button>
+        </form>
         </main>
     </div>
 </body>
