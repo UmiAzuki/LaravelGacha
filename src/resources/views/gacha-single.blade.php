@@ -16,6 +16,11 @@ const RARITYFORIMAGE = ['', 'normal', 'normalplus', 'rare', 'rareplus', 'srare']
             <script>
                 const rarity = '<?= RARITYFORIMAGE[$card->rarityID]; ?>';
                 const card = <?= json_encode($card)?>;
+                document.write("ガチャの抽選結果");
+                document.write('<br>');
+                document.write('<br>');
+                    document.write("レアリティ: " + rarity + "\n" +  "カードナンバー: " + card.rarityID);
+                    document.write('<br>');
             </script>
         </main>
     </div>

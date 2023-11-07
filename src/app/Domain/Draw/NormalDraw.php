@@ -26,12 +26,23 @@ final class NormalDraw implements IDraw
      */
     public function draw(array $gachaWeightTable): Card
     {
-        // 課題2-1 百分率の乱数を生成する
+        $choice = random_int(1,100);
 
         // 課題2-1 確率テーブルからレアリティを抽選
         // 現状では常に1が選ばれる
+
+        //weightとrarityIDの初期化
+        $weight = 0;
         $rarityID = 1;
 
+        //乱数$choiceが$weightより大きければ重みを加算する
+        foreach ($gachaWeightTable as $gachaID){
+
+            if ($choice > $weight){
+                $weight += $gachaID -> weight;
+                $rarityID = $gachaID -> rarityID;
+            }            
+        }
         $cardDomainService = new CardDomainService($this->cardRepository);
         return $cardDomainService->random($rarityID);
     }
